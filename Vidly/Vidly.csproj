@@ -230,9 +230,90 @@
     <Compile Include="Migrations\201810242126191_SetNameInMembershiptype.Designer.cs">
       <DependentUpon>201810242126191_SetNameInMembershiptype.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810251020234_AddedBirthdayToCustomer.cs" />
+    <Compile Include="Migrations\201810251020234_AddedBirthdayToCustomer.Designer.cs">
+      <DependentUpon>201810251020234_AddedBirthdayToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810251027324_AddedBirthdayToCustomer1.cs" />
+    <Compile Include="Migrations\201810251027324_AddedBirthdayToCustomer1.Designer.cs">
+      <DependentUpon>201810251027324_AddedBirthdayToCustomer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810251141139_AddAndPopulateGenresReleaseDateDateAddedNumberInStockInMovie.cs" />
+    <Compile Include="Migrations\201810251141139_AddAndPopulateGenresReleaseDateDateAddedNumberInStockInMovie.Designer.cs">
+      <DependentUpon>201810251141139_AddAndPopulateGenresReleaseDateDateAddedNumberInStockInMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810251155169_PopulateGenresReleaseDateDateAddedNumberInStockInMovie.cs" />
+    <Compile Include="Migrations\201810251155169_PopulateGenresReleaseDateDateAddedNumberInStockInMovie.Designer.cs">
+      <DependentUpon>201810251155169_PopulateGenresReleaseDateDateAddedNumberInStockInMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810251223500_DeleteAllRecordsFromMovies.cs" />
+    <Compile Include="Migrations\201810251223500_DeleteAllRecordsFromMovies.Designer.cs">
+      <DependentUpon>201810251223500_DeleteAllRecordsFromMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810251225147_PopulateGenresReleaseDateDateAddedNumberInStockInMovie1.cs" />
+    <Compile Include="Migrations\201810251225147_PopulateGenresReleaseDateDateAddedNumberInStockInMovie1.Designer.cs">
+      <DependentUpon>201810251225147_PopulateGenresReleaseDateDateAddedNumberInStockInMovie1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810291131130_AddGenre.cs" />
+    <Compile Include="Migrations\201810291131130_AddGenre.Designer.cs">
+      <DependentUpon>201810291131130_AddGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810291237466_DeleteAllRecordsFromMovies1.cs" />
+    <Compile Include="Migrations\201810291237466_DeleteAllRecordsFromMovies1.Designer.cs">
+      <DependentUpon>201810291237466_DeleteAllRecordsFromMovies1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810291238481_DeleteAllRecordsFromMovies11.cs" />
+    <Compile Include="Migrations\201810291238481_DeleteAllRecordsFromMovies11.Designer.cs">
+      <DependentUpon>201810291238481_DeleteAllRecordsFromMovies11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810291239187_DeleteAllRecordsFromMovies12.cs" />
+    <Compile Include="Migrations\201810291239187_DeleteAllRecordsFromMovies12.Designer.cs">
+      <DependentUpon>201810291239187_DeleteAllRecordsFromMovies12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810291240267_DeleteAllRecordsFromMovies13.cs" />
+    <Compile Include="Migrations\201810291240267_DeleteAllRecordsFromMovies13.Designer.cs">
+      <DependentUpon>201810291240267_DeleteAllRecordsFromMovies13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810291252288_DropMovies.cs" />
+    <Compile Include="Migrations\201810291252288_DropMovies.Designer.cs">
+      <DependentUpon>201810291252288_DropMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810291254104_AddMoviesAndGeneres.cs" />
+    <Compile Include="Migrations\201810291254104_AddMoviesAndGeneres.Designer.cs">
+      <DependentUpon>201810291254104_AddMoviesAndGeneres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810291256277_DropMovies1.cs" />
+    <Compile Include="Migrations\201810291256277_DropMovies1.Designer.cs">
+      <DependentUpon>201810291256277_DropMovies1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810291301148_DropGenres.cs" />
+    <Compile Include="Migrations\201810291301148_DropGenres.Designer.cs">
+      <DependentUpon>201810291301148_DropGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810291302073_AddMovie.cs" />
+    <Compile Include="Migrations\201810291302073_AddMovie.Designer.cs">
+      <DependentUpon>201810291302073_AddMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810291302507_AddGenres.cs" />
+    <Compile Include="Migrations\201810291302507_AddGenres.Designer.cs">
+      <DependentUpon>201810291302507_AddGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810291310048_PopulateGenres.cs" />
+    <Compile Include="Migrations\201810291310048_PopulateGenres.Designer.cs">
+      <DependentUpon>201810291310048_PopulateGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810291314558_PopulateMovies.cs" />
+    <Compile Include="Migrations\201810291314558_PopulateMovies.Designer.cs">
+      <DependentUpon>201810291314558_PopulateMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810291515108_TryToResolveProblemWithSaveChanges.cs" />
+    <Compile Include="Migrations\201810291515108_TryToResolveProblemWithSaveChanges.Designer.cs">
+      <DependentUpon>201810291515108_TryToResolveProblemWithSaveChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genres.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -240,6 +321,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomersViewModel.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -306,6 +389,9 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\Edit.cshtml" />
+    <Content Include="Views\Movies\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -344,6 +430,66 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810242126191_SetNameInMembershiptype.resx">
       <DependentUpon>201810242126191_SetNameInMembershiptype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810251020234_AddedBirthdayToCustomer.resx">
+      <DependentUpon>201810251020234_AddedBirthdayToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810251027324_AddedBirthdayToCustomer1.resx">
+      <DependentUpon>201810251027324_AddedBirthdayToCustomer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810251141139_AddAndPopulateGenresReleaseDateDateAddedNumberInStockInMovie.resx">
+      <DependentUpon>201810251141139_AddAndPopulateGenresReleaseDateDateAddedNumberInStockInMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810251155169_PopulateGenresReleaseDateDateAddedNumberInStockInMovie.resx">
+      <DependentUpon>201810251155169_PopulateGenresReleaseDateDateAddedNumberInStockInMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810251223500_DeleteAllRecordsFromMovies.resx">
+      <DependentUpon>201810251223500_DeleteAllRecordsFromMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810251225147_PopulateGenresReleaseDateDateAddedNumberInStockInMovie1.resx">
+      <DependentUpon>201810251225147_PopulateGenresReleaseDateDateAddedNumberInStockInMovie1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810291131130_AddGenre.resx">
+      <DependentUpon>201810291131130_AddGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810291237466_DeleteAllRecordsFromMovies1.resx">
+      <DependentUpon>201810291237466_DeleteAllRecordsFromMovies1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810291238481_DeleteAllRecordsFromMovies11.resx">
+      <DependentUpon>201810291238481_DeleteAllRecordsFromMovies11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810291239187_DeleteAllRecordsFromMovies12.resx">
+      <DependentUpon>201810291239187_DeleteAllRecordsFromMovies12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810291240267_DeleteAllRecordsFromMovies13.resx">
+      <DependentUpon>201810291240267_DeleteAllRecordsFromMovies13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810291252288_DropMovies.resx">
+      <DependentUpon>201810291252288_DropMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810291254104_AddMoviesAndGeneres.resx">
+      <DependentUpon>201810291254104_AddMoviesAndGeneres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810291256277_DropMovies1.resx">
+      <DependentUpon>201810291256277_DropMovies1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810291301148_DropGenres.resx">
+      <DependentUpon>201810291301148_DropGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810291302073_AddMovie.resx">
+      <DependentUpon>201810291302073_AddMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810291302507_AddGenres.resx">
+      <DependentUpon>201810291302507_AddGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810291310048_PopulateGenres.resx">
+      <DependentUpon>201810291310048_PopulateGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810291314558_PopulateMovies.resx">
+      <DependentUpon>201810291314558_PopulateMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810291515108_TryToResolveProblemWithSaveChanges.resx">
+      <DependentUpon>201810291515108_TryToResolveProblemWithSaveChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -30,7 +30,7 @@ namespace Vidly.Models
         public DateTime? DateAdded { get; set; }
 
         [Required]
-        [QuantityRangeOfMoviesToAdd] //just for practice I create my own validation class, in this case you should use [Range(1,20)] it is prettier
+        [Range(1,20)]
         [Display(Name = "Number in stock")]
         public int? NumberInStock { get; set; }
     }

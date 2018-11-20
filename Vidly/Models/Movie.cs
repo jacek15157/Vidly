@@ -15,22 +15,23 @@ namespace Vidly.Models
         public string Name { get; set; }
 
         
-        public Genres Genre { get; set; }
+        public Genre Genre { get; set; }
 
         [Required]
         [Display(Name = "Genre")]
         public byte GenreId { get; set; }
 
-        [Required]
+        [Required (ErrorMessage = "Please enter date MM.DD.YYYY")]
         [Display(Name = "Release Date")]
         public DateTime? ReleaseDate { get; set; }
-       
-        [Required]
+
+        [Required(ErrorMessage = "Please enter date MM.DD.YYYY")]
         [Display(Name = "Added Date")]
         public DateTime? DateAdded { get; set; }
 
         [Required]
+        [QuantityRangeOfMoviesToAdd] //just for practice I create my own validation class, in this case you should use [Range(1,20)] it is prettier
         [Display(Name = "Number in stock")]
-        public int NumberInStock { get; set; }
+        public int? NumberInStock { get; set; }
     }
 }

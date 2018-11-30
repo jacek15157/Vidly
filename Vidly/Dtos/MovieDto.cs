@@ -15,18 +15,18 @@ namespace Vidly.Dtos
         [StringLength(255)]
         public string Name { get; set; }
 
-        public Genre Genre { get; set; }
+        public GenreDto Genre { get; set; }
 
-        [Required]
+        //[Required]
         public byte GenreId { get; set; }
 
-        [Required(ErrorMessage = "Please enter date MM.DD.YYYY")]
+        //[Required(ErrorMessage = "Please enter date MM.DD.YYYY")]
         public DateTime? ReleaseDate { get; set; }
 
-        [Required(ErrorMessage = "Please enter date MM.DD.YYYY")]
+        //[Required(ErrorMessage = "Please enter date MM.DD.YYYY")]
         public DateTime? DateAdded { get; set; }
 
-        [Required]
+        //[Required]
        // [Range(1, 20)]
         public int? NumberInStock { get; set; }
     }

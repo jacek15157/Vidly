@@ -10,7 +10,7 @@ using Vidly.Models;
 
 namespace Vidly.Controllers
 {
-    [Authorize]
+    
     public class ManageController : Controller
     {
         private ApplicationSignInManager _signInManager;

@@ -65,6 +65,10 @@ namespace Vidly.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "Pesel")]
+        public long IdentityNumber { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }

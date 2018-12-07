@@ -4,12 +4,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Name</h2>
+<h2>@Model.Name</h2> 
 <ul>
     <li>Name: @Model.Name </li>
-    <li>Genre: @Model.Genre </li>
+    <li>Genre: @Model.Genre.Name </li>
     <li>Release Date: @Model.ReleaseDate.Value.ToShortDateString()</li>
     <li>Added : @Model.DateAdded.Value.ToShortDateString() </li>
     <li>Number in stock: @Model.NumberInStock </li>
 </ul>
 
+@*I need to change this view on JS code*@

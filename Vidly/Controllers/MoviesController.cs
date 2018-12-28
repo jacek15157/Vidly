@@ -75,6 +75,7 @@ namespace Vidly.Controllers
                 movieInDb.DateAdded = movie.DateAdded;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
                 movieInDb.NumberInStock = movie.NumberInStock;
+                movieInDb.NumberOfAvailable = movie.NumberInStock;
             }
             _context.SaveChanges();
 

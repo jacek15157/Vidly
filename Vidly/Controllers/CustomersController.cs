@@ -9,7 +9,7 @@ using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
-    //[Authorize(Roles = RoleName.CanManageMovies)] // customer can't have access to the list of customers|I NEED TO RENAME IT  
+    [Authorize(Roles = RoleName.CanManageMovies)]  
     public class CustomersController : Controller
     {
         private ApplicationDbContext _context;

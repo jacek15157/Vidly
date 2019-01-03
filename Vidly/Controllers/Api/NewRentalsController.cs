@@ -10,6 +10,7 @@ using Vidly.Models;
 
 namespace Vidly.Controllers.Api
 {
+    
     public class NewRentalsController : ApiController
     {
 

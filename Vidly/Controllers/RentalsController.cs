@@ -7,7 +7,7 @@ using Vidly.Models;
 
 namespace Vidly.Controllers
 {
-    
+    [Authorize]
     public class RentalsController : Controller
     {
         // GET: Rentals

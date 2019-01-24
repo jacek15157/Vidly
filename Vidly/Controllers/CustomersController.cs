@@ -59,8 +59,6 @@ namespace Vidly.Controllers
                     MembershipTypes = _context.MembershipTypes.ToList()
                 };
                 return View("CustomerForm", viewModel);
-
-
             }
 
             if (customer.Id == 0)
@@ -77,7 +75,6 @@ namespace Vidly.Controllers
 
             }
             _context.SaveChanges();
-
             return RedirectToAction("Index", "Customers");
         }
 

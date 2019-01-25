@@ -15,7 +15,8 @@
                 <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
                 <li>@Html.ActionLink("Movies", "Index", "Movies")</li>
                 <li>@Html.ActionLink("Add Movie", "New", "Movies")</li>
-                <li>@Html.ActionLink("Add Customer", "New", "Customers")</li>
+                <li>@Html.ActionLink("Add Customer", "New", "Customers", routeValues: null, htmlAttributes: new { id = "AddCustomer" })</li>
+                
 
             </ul>
             @Html.Partial("_LoginPartial")

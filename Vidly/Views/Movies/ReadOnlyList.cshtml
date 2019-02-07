@@ -28,7 +28,10 @@
                 },
                 columns: [
                     {
-                        data: "name"  //I need to find out how to put here function to show users Details about movie
+                        data: "name",
+                        render: function (data, type, movie) {
+                            return "<a href='/movies/details/" + movie.id + "'>" + movie.name + "</a>";
+                        }
                     },
                     {
                         data: "genre.name"

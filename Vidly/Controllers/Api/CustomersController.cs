@@ -11,7 +11,7 @@ using Vidly.Models;
 
 namespace Vidly.Controllers.Api
 {
-    //[Authorize(Roles = RoleName.CanManageMovies)]
+   
     public class CustomersController : ApiController
     {
         private ApplicationDbContext _context;
@@ -54,7 +54,7 @@ namespace Vidly.Controllers.Api
 
         //POST /api/customers
         [HttpPost]
-        public IHttpActionResult CreateCustomer(CustomerDto customerDto) //id I named it as PostCustomer It'd not need a [HttpPost]
+        public IHttpActionResult CreateCustomer(CustomerDto customerDto) //if I named it as "PostCustomer" It'd not need a [HttpPost] 
         {
             if (!ModelState.IsValid)
             {

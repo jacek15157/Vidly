@@ -374,6 +374,10 @@
     <Compile Include="Migrations\201812281428218_FixedRentalModel.Designer.cs">
       <DependentUpon>201812281428218_FixedRentalModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902070937060_SeedUpdatedUsers.cs" />
+    <Compile Include="Migrations\201902070937060_SeedUpdatedUsers.Designer.cs">
+      <DependentUpon>201902070937060_SeedUpdatedUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -774,6 +778,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812281428218_FixedRentalModel.resx">
       <DependentUpon>201812281428218_FixedRentalModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902070937060_SeedUpdatedUsers.resx">
+      <DependentUpon>201902070937060_SeedUpdatedUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

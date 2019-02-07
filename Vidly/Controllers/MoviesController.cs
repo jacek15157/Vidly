@@ -82,9 +82,7 @@ namespace Vidly.Controllers
 
             return RedirectToAction("Index", "Movies");
         }
-        /* przyklad poprawnego routingu  
-        [Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)}")]
-        */
+        
         public ActionResult Details(int id)
         {
             var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == id);

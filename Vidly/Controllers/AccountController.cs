@@ -163,11 +163,11 @@ namespace Vidly.Controllers
                 if (result.Succeeded)
                 {
                     //this code let us create account which will manage movies
-                    /*
+                  /*  
                     var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());
                     var roleManager = new RoleManager<IdentityRole>(roleStore);
-                    await roleManager.CreateAsync(new IdentityRole("CanManageMovies"));
-                    await UserManager.AddToRoleAsync(user.Id, "CanManageMovies");
+                    await roleManager.CreateAsync(new IdentityRole("CanManageMoviesAndCustomers"));
+                    await UserManager.AddToRoleAsync(user.Id, "CanManageMoviesAndCustomers");
                     */
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     

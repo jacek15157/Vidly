@@ -10,21 +10,21 @@
     @Html.ActionLink("Add Movie", "New", "Movies", null, new { @class = "btn btn-primary" })
 </p>
 
-    <table id="movies" class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>Movies</th>
-                <th>Genre</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+<table id="movies" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Movies</th>
+            <th>Genre</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
 
 @section scripts
 {
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             var table = $("#movies").DataTable({
                 ajax: {
                     url: "/api/movies",
@@ -51,21 +51,19 @@
             $("#movies").on("click", ".js-delete",
                 function () {
                     var button = $(this);
-
                     bootbox.confirm("Are you sure you want to delete this movie?",
-                        function(result) {
+                        function (result) {
                             if (result) {
                                 $.ajax({
                                     url: "/api/movies/" + button.attr("data-movie-id"),
                                     method: "DELETE",
-                                    success: function() {
+                                    success: function () {
                                         table.row(button.parents("tr")).remove().draw(); //datatables.net
                                     }
                                 });
                             }
                         });
                 });
-
         });
     </script>
 }

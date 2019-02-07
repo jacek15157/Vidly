@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.UI.WebControls;
 using AutoMapper;
 using Vidly.Dtos;
 using Vidly.Models;
@@ -100,8 +101,18 @@ namespace Vidly.Controllers.Api
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
-            _context.Movies.Remove(movieInDb);
-            _context.SaveChanges();
+            /*Temporary fixed, User cant delete Movie from database if all movies was not returned first */
+            if (movieInDb.NumberInStock == movieInDb.NumberOfAvailable) 
+            {
+                _context.Movies.Remove(movieInDb);
+                _context.SaveChanges();
+            }
+            else
+            {
+             
+               throw new HttpResponseException(HttpStatusCode.BadRequest);
+                
+            }
         }
 
     }

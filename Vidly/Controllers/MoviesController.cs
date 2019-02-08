@@ -5,6 +5,8 @@ using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AutoMapper;
+using Vidly.Dtos;
 using Vidly.Models;
 using Vidly.ViewModels;
 
@@ -50,7 +52,7 @@ namespace Vidly.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = RoleName.CanManageMoviesOrCanManageMoviesAndCustomers)]
-        public ActionResult Save(Movie movie)
+        public ActionResult Save(MovieDto movie)
         {
             if (!ModelState.IsValid)
             {
@@ -65,21 +67,21 @@ namespace Vidly.Controllers
 
             if (movie.Id == 0)
             {
-                 movie.NumberOfAvailable = movie.NumberInStock;
-                _context.Movies.Add(movie);
+                var movieToDb  = new Movie();
+                Mapper.Map(movie, movieToDb);
+                movieToDb.NumberOfAvailable = movie.NumberInStock;
+                _context.Movies.Add(movieToDb);
             }
             else
             {
                 var movieInDb = _context.Movies.Single(c => c.Id == movie.Id);
-                movieInDb.Name = movie.Name;
-                movieInDb.GenreId = movie.GenreId;
-                movieInDb.DateAdded = movie.DateAdded;
-                movieInDb.ReleaseDate = movie.ReleaseDate;
-                movieInDb.NumberInStock = movie.NumberInStock;
-                movieInDb.NumberOfAvailable = movie.NumberInStock;
+                var inStockBeforeChanges = movieInDb.NumberInStock;
+                Mapper.Map<MovieDto, Movie>(movie, movieInDb);
+                var changeForNumberOfAvailable =  movie.NumberInStock - inStockBeforeChanges;
+                movieInDb.NumberOfAvailable += changeForNumberOfAvailable;
             }
-            _context.SaveChanges();
 
+            _context.SaveChanges();
             return RedirectToAction("Index", "Movies");
         }
         

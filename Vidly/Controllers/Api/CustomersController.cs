@@ -28,7 +28,7 @@ namespace Vidly.Controllers.Api
                 .Include(c => c.MembershipType);
 
             if (!String.IsNullOrWhiteSpace(query))
-                customersQuery = customersQuery.Where(c => c.Name.Contains(query));
+                customersQuery = customersQuery.Where(c => c.Name.Contains(query)); //for user input in New Rental filed: Customer Name 
 
             var customerDtos = customersQuery
                 .ToList()

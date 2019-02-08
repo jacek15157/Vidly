@@ -1,0 +1,51 @@
+﻿@using Vidly.Models
+@model IEnumerable<Vidly.Models.Rental>
+@{
+    ViewBag.Title = "ListOfRentals";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListOfRentals</h2>
+
+<table id="rentals" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Movie</th>
+            <th>Date Rented</th>
+            <th>Date Returned</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+                $("#rentals").DataTable({
+                    ajax: {
+                        url: "/api/rentals",
+                        dataSrc: ''
+                    },
+                    columns: [
+                        {
+                            data: "customer.name"
+                        },
+                        {
+                            data: "movie.name"
+                        },
+                        {
+                            data: "dateRented"
+                         },
+                        {
+                            data: "dateReturned"
+                        }
+                    ]
+                });
+
+        });
+    </script>
+}
+

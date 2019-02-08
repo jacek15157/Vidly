@@ -36,7 +36,7 @@ namespace Vidly.Controllers.Api
                 .Select(Mapper.Map<Movie, MovieDto>);
         }
 
-        //GET /api/movie/1
+        //GET /api/movies/1
         public IHttpActionResult GetMovie(int id)
         {
             var movie = _context.Movies.SingleOrDefault(m => m.Id == id);
@@ -52,7 +52,7 @@ namespace Vidly.Controllers.Api
 
         //POST /api/movies
         [HttpPost]
-        [Authorize(Roles = RoleName.CanManageMovies)]
+        [Authorize(Roles = RoleName.CanManageMoviesOrCanManageMoviesAndCustomers)]
         public IHttpActionResult CreateMovie(MovieDto movieDto) 
         {
             if (!ModelState.IsValid)
@@ -68,9 +68,9 @@ namespace Vidly.Controllers.Api
             return Created(new Uri(Request.RequestUri + "/" + movie.Id), movieDto);
         }
 
-        //PUT  /api/customers/1
+        //PUT  /api/movies/1
         [HttpPut]
-        [Authorize(Roles = RoleName.CanManageMovies)]
+        [Authorize(Roles = RoleName.CanManageMoviesOrCanManageMoviesAndCustomers)]
         public void UpdateMovie(int id, MovieDto movieDto)
         {
             if (!ModelState.IsValid)
@@ -90,8 +90,9 @@ namespace Vidly.Controllers.Api
             _context.SaveChanges();
         }
 
+        //DELETE /api/movies/1
         [HttpDelete]
-        [Authorize(Roles = RoleName.CanManageMovies)]
+        [Authorize(Roles = RoleName.CanManageMoviesOrCanManageMoviesAndCustomers)]
         public void DeleteMovie(int id)
         {
             var movieInDb = _context.Movies.SingleOrDefault(m => m.Id == id);
@@ -100,19 +101,8 @@ namespace Vidly.Controllers.Api
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
-
-            /*Temporary fixed, User cant delete Movie from database if all movies was not returned first */
-            if (movieInDb.NumberInStock == movieInDb.NumberOfAvailable) 
-            {
                 _context.Movies.Remove(movieInDb);
                 _context.SaveChanges();
-            }
-            else
-            {
-             
-               throw new HttpResponseException(HttpStatusCode.BadRequest);
-                
-            }
         }
 
     }

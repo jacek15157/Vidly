@@ -48,8 +48,9 @@ namespace Vidly.Controllers.Api
         }
 
         // PUT: api/Rentals/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id)
         {
+            
         }
 
         // DELETE: api/Rentals/5

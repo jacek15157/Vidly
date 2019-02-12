@@ -24,8 +24,8 @@
 @section scripts
 {
     <script>
-        $(document).ready(function () {
-            $("#rentals").DataTable({
+        $(document).ready(function() {
+            var table = $("#rentals").DataTable({
                 ajax: {
                     url: "/api/rentals",
                     dataSrc: ''
@@ -38,18 +38,31 @@
                         data: "movie.name"
                     },
                     {
-                        data: "dateRented"
+                        data: "dateRented",
+                        render: function(data, type, row) {
+                            var dateSplit = data.split('-');
+                            var dateSplitTime = dateSplit[2].split("T"); 
+                            return type === "display" || type === "filter"
+                                ? dateSplit[1] + '-' + dateSplitTime[0] + '-' + dateSplit[0] + ' ' + dateSplitTime[1]
+                                : data;
+                        }
                     },
                     {
-                        data: "dateReturned"
+                        data: "dateReturned",
+                        render: function(data, type, row) {
+                            var dateSplit = data.split('-');
+                            var dateSplitTime = dateSplit[2].split("T"); 
+                            return type === "display" || type === "filter"
+                                ? dateSplit[1] + '-' + dateSplitTime[0] + '-' + dateSplit[0] + ' ' + dateSplitTime[1]
+                                : data;
+                        }
                     },
                     {
                         data: "id",
                         render: function(data, type, rental) {
                             if (rental.dateReturned === null) {
                                 return "<button class='btn-link js-delete' data-rental-id=" + data + ">Return</button>";
-                            }
-                            else {
+                            } else {
                                 return "<p class='text-success'>Returned</p>";
                             }
                         }
@@ -67,7 +80,7 @@
                                 $.ajax({
                                     url: "/rentals/return/" + button.attr("data-rental-id"),
                                     success: function() {
-                                        table.row(button.parents("tr")).update().draw(); //datatables.net
+                                        table.ajax.reload(); //datatables.net
                                     }
                                 });
                             }

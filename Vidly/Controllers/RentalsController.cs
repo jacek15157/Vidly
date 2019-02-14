@@ -11,7 +11,7 @@ using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class RentalsController : Controller
     {
         private ApplicationDbContext _context;

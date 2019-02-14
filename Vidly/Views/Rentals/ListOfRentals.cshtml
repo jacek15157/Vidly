@@ -50,11 +50,14 @@
                     {
                         data: "dateReturned",
                         render: function(data, type, row) {
-                            var dateSplit = data.split('-');
-                            var dateSplitTime = dateSplit[2].split("T"); 
-                            return type === "display" || type === "filter"
-                                ? dateSplit[1] + '-' + dateSplitTime[0] + '-' + dateSplit[0] + ' ' + dateSplitTime[1]
-                                : data;
+                            if (data != null) {
+                                var dateSplit = data.split('-');
+                                var dateSplitTime = dateSplit[2].split("T"); 
+                                return type === "display" || type === "filter"
+                                    ? dateSplit[1] + '-' + dateSplitTime[0] + '-' + dateSplit[0] + ' ' + dateSplitTime[1]
+                                    : data;    
+                            }
+                            return null;
                         }
                     },
                     {

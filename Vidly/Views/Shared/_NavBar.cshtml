@@ -10,14 +10,37 @@
             @Html.ActionLink("VRS", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("New Rental", "New", "Rentals")</li>
-                <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
-                <li>@Html.ActionLink("Movies", "Index", "Movies")</li>
-                <li>@Html.ActionLink("Add Movie", "New", "Movies")</li>
-                <li>@Html.ActionLink("Add Customer", "New", "Customers", routeValues: null, htmlAttributes: new { id = "AddCustomer" })</li>
-                <li>@Html.ActionLink("All Rentals", "GetRentals", "Rentals")</li>
-            </ul>
+            @if (User.Identity.IsAuthenticated)
+            {
+                if (User.IsInRole("CanManageMoviesAndCustomers"))
+                {
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("New Rental", "New", "Rentals")</li>
+                        <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
+                        <li>@Html.ActionLink("Movies", "Index", "Movies")</li>
+                        <li>@Html.ActionLink("Add Movie", "New", "Movies")</li>
+                        <li>@Html.ActionLink("Add Customer", "New", "Customers", routeValues: null, htmlAttributes: new { id = "AddCustomer" })</li>
+                        <li>@Html.ActionLink("All Rentals", "GetRentals", "Rentals")</li>
+                    </ul>
+                }
+                else if (User.IsInRole("CanManageMovies"))
+                {
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("New Rental", "New", "Rentals")</li>
+                        <li>@Html.ActionLink("Movies", "Index", "Movies")</li>
+                        <li>@Html.ActionLink("Add Movie", "New", "Movies")</li>
+                        <li>@Html.ActionLink("All Rentals", "GetRentals", "Rentals")</li>
+                    </ul>
+                }
+                else
+                {
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("New Rental", "New", "Rentals")</li>
+                        <li>@Html.ActionLink("Movies", "Index", "Movies")</li>
+                        <li>@Html.ActionLink("All Rentals", "GetRentals", "Rentals")</li>
+                    </ul>
+                }
+            }
             @Html.Partial("_LoginPartial")
         </div>
     </div>

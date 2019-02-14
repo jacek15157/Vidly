@@ -44,10 +44,10 @@
                         data: "id",
                         render: function(data, type, movie) {
                             if (movie.numberOfAvailable === movie.numberInStock) {
-                                return "<button class='btn-link js-delete' data-movie-id=" + data + ">Delete</button>";
+                                return" <button class='btn-link js-delete' data-movie-id=" + data + ">Delete</button>";
                             }
                             else {
-                                return "<button class='btn-link'>No</button>";
+                                return "You can delete if everybody returned a movie, currently in stock is "+ movie.numberOfAvailable + "/" + movie.numberInStock;
                             }
                         }
 
